@@ -35,31 +35,21 @@ export default function App() {
           </p>
 
           <div className="buttons">
-            <Button
-              bgColor="#7950f2"
-              textColor="#fff"
-              onClickprop={handlePrevious}
+            <button
+              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+              onClick={handlePrevious}
             >
-              <span>👈</span> Previous
-            </Button>
-
-            <Button bgColor="#7950f2" textColor="#fff" onClickprop={handleNext}>
-              Next <span>👉</span>
-            </Button>
+              Previous
+            </button>
+            <button
+              style={{ backgroundColor: "#7950f2", color: "#fff" }}
+              onClick={handleNext}
+            >
+              Next
+            </button>
           </div>
         </div>
       )}
     </>
-  );
-}
-
-function Button({ bgColor, textColor, onClickprop, children }) {
-  return (
-    <button
-      style={{ backgroundColor: bgColor, color: textColor }}
-      onClick={onClickprop}
-    >
-      {children}
-    </button>
   );
 }
